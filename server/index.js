@@ -7,7 +7,10 @@ import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoutes from "./routes/kpi.js"
 import KPI from "./models/KPI.js";
-import {kpis} from "./data/data.js"
+import productRoutes from "./routes/product.js"
+import Product from "./models/Product.js"
+import {kpis, products} from "./data/data.js"
+
 
 // CONFIGURATION
 dotenv.config();
@@ -22,6 +25,7 @@ app.use(cors());
 
 // ROUTES
 app.use("/kpi", kpiRoutes)
+app.use("/product", productRoutes)
 
 // console.log("hello");
 
@@ -38,5 +42,6 @@ mongoose
     // ADD DATA ONE TIME ONLY 
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis)
+    // Product.insertMany(products)
   })
   .catch((error) => console.log(`${error} did not connect`));
