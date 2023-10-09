@@ -65,7 +65,7 @@ const Dashboard = () => {
         isAboveMediumScreen
           ? {
               gridTemplateColumns: "repeat(3, minmax(270px, 1fr))",
-              gridTemplateRows: "repeat(10, mixmax(60px, 1fr))",
+              gridTemplateRows: "repeat(10, minmax(60px, 1fr))",
               gridTemplateAreas: gridTemplateLargeScreens,
             }
           : {
