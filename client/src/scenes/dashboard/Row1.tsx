@@ -12,7 +12,7 @@ import {
   Bar,
   BarChart,
 } from "recharts";
-import React, { useMemo } from "react";
+import  { useMemo } from "react";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
